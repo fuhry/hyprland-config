@@ -117,9 +117,6 @@ hl.config({
     -- Move active window to a workspace with mainMod + SHIFT + [0-9]
     -- Example special workspace (scratchpad)
     -- Scroll through existing workspaces with mainMod + scroll
-    -- Move/resize windows with mainMod + LMB/RMB and dragging
-    -- bindm = $mainMod, mouse:272, movewindow
-    -- bindm = $mainMod, mouse:273, resizewindow
     -- Laptop multimedia keys for volume and LCD brightness
     -- bindel = ,XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
     -- bindel = ,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
@@ -135,6 +132,13 @@ hl.config({
     --bind = $mainMod, O, hyprexpo:expo, toggle
     -- vdesk
 })
+
+    -- Move/resize windows with mainMod + LMB/RMB and dragging
+    -- bindm = $mainMod, mouse:272, movewindow
+    -- bindm = $mainMod, mouse:273, resizewindow
+
+hl.bind("ALT + mouse:272", hl.dsp.window.drag(), { mouse = true })
+hl.bind("ALT + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"))
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"))
