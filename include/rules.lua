@@ -72,7 +72,7 @@ hl.window_rule({
     },
     no_initial_focus = true,
     float = true,
-	["hyprbars:no_bar"] = true,
+    ["hyprbars:no_bar"] = true,
     -- TODO: manual review — unrecognized window_rule block field "hyprbars:no_bar"
     -- match:xwayland = 0
     -- match:float = 0

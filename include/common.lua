@@ -6,7 +6,7 @@ require("include.look")
 require("include.rules")
 require("include.layout")
 require("include.keybinds")
-require("include.hyprbars")
+-- require("include.hyprbars")
 require("include.hyprexpo")
 
 --##################
